@@ -28,13 +28,12 @@ public class Main {
         Scanner myInput = new Scanner(System.in);
         int age = myInput.nextInt();
 
-        if (age <= 0) {
-            while (age <= 0) {
-                System.out.println("Возраст введен неправильно, введите повторно");
-                myInput = new Scanner(System.in);
-                age = myInput.nextInt();
-            }
+        while (age <= 0) {
+            System.out.println("Возраст введен неправильно, введите повторно");
+            myInput = new Scanner(System.in);
+            age = myInput.nextInt();
         }
+
         if (age < 18)
             System.out.println("Ты не можешь водить");
         else if (age >= 18)
@@ -128,6 +127,7 @@ public class Main {
         System.out.println(sb);
         System.out.println();
     }
+
     public static void task6() {
         System.out.println("Задание 6:");
 
@@ -142,12 +142,10 @@ public class Main {
         if (passengers < seated) {
             sb.append("сидячие места");
             System.out.println(sb);
-        }
-        else if (passengers >= seated && passengers < capacity) {
+        } else if (passengers >= seated && passengers < capacity) {
             sb.append("стоячие места");
             System.out.println(sb);
-        }
-        else if (passengers >= capacity)
+        } else if (passengers >= capacity)
             System.out.println("В вагоне нет мест");
 
         System.out.println();
