@@ -18,6 +18,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -135,7 +136,6 @@ public class Main {
         System.out.println("Колчиество предпологаеммых пассажиров: " + passengers);
         int capacity = 102;
         int seated = 60;
-        int standing = capacity - seated;
 
         StringBuilder sb = new StringBuilder("В вагоне есть ");
 
@@ -149,6 +149,21 @@ public class Main {
             System.out.println("В вагоне нет мест");
 
         System.out.println();
+    }
+
+    public static void task7(){
+
+        int one = getRandomNumber(0,100);
+        int two = getRandomNumber(0,100);
+        int three = getRandomNumber(0,100);
+
+        if (one >= two && one >= three)
+            System.out.println("Первое число больше всех");
+        if (two >= one && two >= three)
+            System.out.println("Второе число больше всех");
+        if (three >= two && three >= one)
+            System.out.println("Третье число больше всех");
+
     }
 
     public static int getRandomNumber(int min, int max) {

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f228077-58e2-4b74-9ff5-074b9169ca23" name="Changes" comment="Homework Done">
+    <list default="true" id="1f228077-58e2-4b74-9ff5-074b9169ca23" name="Changes" comment="Homework Done (minor changes)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "X:/Code/Java/Libs/json-20140107.jar",
+    "last_opened_file_path": "X:/Code/Java/Homork_04",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -53,7 +54,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1673865326519</updated>
-      <workItem from="1673865327706" duration="12694000" />
+      <workItem from="1673865327706" duration="13598000" />
+      <workItem from="1673885526502" duration="20000" />
+      <workItem from="1674061547308" duration="901000" />
+      <workItem from="1674065359953" duration="1359000" />
+      <workItem from="1674066786603" duration="294000" />
+      <workItem from="1674067294314" duration="347000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1673865463316</created>
@@ -69,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673879111039</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Homework Done (minor changes)">
+      <created>1673881575418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673881575418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,6 +92,7 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="break" />
     <MESSAGE value="Homework Done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework Done" />
+    <MESSAGE value="Homework Done (minor changes)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework Done (minor changes)" />
   </component>
 </project>
