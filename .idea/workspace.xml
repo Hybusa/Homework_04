@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1f228077-58e2-4b74-9ff5-074b9169ca23" name="Changes" comment="Homework Done (minor changes)">
+    <list default="true" id="1f228077-58e2-4b74-9ff5-074b9169ca23" name="Changes" comment="Homework Done (changes API to open-meteo)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -59,7 +59,8 @@
       <workItem from="1674061547308" duration="901000" />
       <workItem from="1674065359953" duration="1359000" />
       <workItem from="1674066786603" duration="294000" />
-      <workItem from="1674067294314" duration="347000" />
+      <workItem from="1674067294314" duration="612000" />
+      <workItem from="1674080419585" duration="1860000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1673865463316</created>
@@ -82,7 +83,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673881575418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Homework Done (added task 7, missed before)">
+      <created>1674067896950</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674067896950</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -93,6 +101,8 @@
     <MESSAGE value="break" />
     <MESSAGE value="Homework Done" />
     <MESSAGE value="Homework Done (minor changes)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Homework Done (minor changes)" />
+    <MESSAGE value="Homework Done (added task 7, missed before)" />
+    <MESSAGE value="Homework Done (changes API to open-meteo)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Homework Done (changes API to open-meteo)" />
   </component>
 </project>

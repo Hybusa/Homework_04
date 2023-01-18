@@ -12,13 +12,13 @@ import org.json.JSONObject;
 public class Main {
     public static void main(String[] args) throws URISyntaxException {
 
-        task1();
-        task2();
-        task3();
-        task4();
-        task5();
-        task6();
-        task7();
+       task1();
+       task2();
+       task3();
+       task4();
+       task5();
+       task6();
+       task7();
     }
 
     public static void task1() {
@@ -27,8 +27,13 @@ public class Main {
         System.out.println("Введите возраст:");
 
         Scanner myInput = new Scanner(System.in);
-        int age = myInput.nextInt();
 
+        while (!myInput.hasNextInt()) {
+            System.out.println("Ошбика введено не числоб введите число");
+            myInput = new Scanner(System.in);
+        }
+
+            int age = myInput.nextInt();
         while (age <= 0) {
             System.out.println("Возраст введен неправильно, введите повторно");
             myInput = new Scanner(System.in);
@@ -37,40 +42,38 @@ public class Main {
 
         if (age < 18)
             System.out.println("Ты не можешь водить");
-        else if (age >= 18)
+        else
             System.out.println("Ты можешь водить");
         System.out.println();
     }
 
-    public static void task2() throws URISyntaxException {
+    public static void task2() throws URISyntaxException, RuntimeException {
         System.out.println("Задание 2:");
 
-        URI uri = new URI("https://api.weather.yandex.ru/v2/fact/?lat=55.751244&lon=37.618423&lang=ru_RU");
+        URI uri = new URI("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true");
         HttpRequest getRequest = HttpRequest.newBuilder()
-                .uri(uri)
-                .header("X-Yandex-API-Key", "9f23e14c-0ed5-4bf6-9c59-93cf82f1dd8a").GET().build();
+                .uri(uri).GET().build();
 
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpResponse<String> getResponse;
         try {
             getResponse = httpClient.send(getRequest, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        } catch (IOException | InterruptedException timeOut) {
+            throw new RuntimeException(timeOut);
         }
 
         JSONObject answer = new JSONObject(getResponse.body());
-        int currTemp = (int) answer.get("temp");
-        int feelsTemp = (int) answer.get("feels_like");
-        StringBuilder sb = new StringBuilder("В Москве сейчас: " + currTemp + " ощущается как " + feelsTemp);
+        JSONObject currentWeather = (JSONObject) answer.get("current_weather");
+        double currTemp = (double) currentWeather.get("temperature");
 
+       // int feelsTemp = (int) answer.get("feels_like");
+        StringBuilder sb = new StringBuilder("В Москве сейчас: " + currTemp);
 
         if (currTemp < 5) {
-            sb.append(". нужно надеть шапку");
+            sb.append(", нужно надеть шапку");
             System.out.println(sb);
         } else {
-            sb.append(".  можно идти без шапки");
+            sb.append(",  можно идти без шапки");
             System.out.println(sb);
         }
         System.out.println();
@@ -142,10 +145,10 @@ public class Main {
         if (passengers < seated) {
             sb.append("сидячие места");
             System.out.println(sb);
-        } else if (passengers >= seated && passengers < capacity) {
+        } else if (passengers < capacity) {
             sb.append("стоячие места");
             System.out.println(sb);
-        } else if (passengers >= capacity)
+        } else
             System.out.println("В вагоне нет мест");
 
         System.out.println();
@@ -169,6 +172,4 @@ public class Main {
     public static int getRandomNumber(int min, int max) {
         return (int) ((Math.random() * (max - min)) + min);
     }
-
-
 }
